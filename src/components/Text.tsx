@@ -1,6 +1,6 @@
 import { Text as NativeText, StyleSheet } from "react-native";
 
-type TextVariant = "h1" | "h2" | "h3";
+type TextVariant = "h1" | "h2" | "h3" | "h4" | "h5";
 
 interface CustomText {
   children: string;
@@ -8,7 +8,6 @@ interface CustomText {
 }
 
 function Text({ children, variant, ...rest }: CustomText) {
-    
   const settings = {
     fontSize: 15,
     marginVertical: 5,
@@ -29,6 +28,15 @@ function Text({ children, variant, ...rest }: CustomText) {
       settings.fontSize = 25;
       settings.marginVertical = 11;
       break;
+    case "h4":
+      settings.fontSize = 21;
+      settings.marginVertical = 11;
+      break;
+    case "h5":
+      settings.fontSize = 18;
+      settings.marginVertical = 8;
+      break;
+
     default:
       break;
   }
