@@ -5,6 +5,7 @@ import Text from "./src/components/Text";
 import Button from "./src/components/Button";
 export default function App() {
   const [textInput, setTextInput] = useState("");
+  const [textInput2, setTextInput2] = useState("");
   return (
     <ScrollView
       contentContainerStyle={{ flexGrow: 1 }}
@@ -14,6 +15,11 @@ export default function App() {
         <TextInput
           onChangeText={setTextInput}
           value={textInput}
+          placeholder="Some placeholder"
+        />
+        <TextInput
+          onChangeText={setTextInput2}
+          value={textInput2}
           placeholder="Some placeholder"
         />
         <Text variant="h1">Header 1</Text>
